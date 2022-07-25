@@ -10,9 +10,11 @@
   <section>
     <div class="container">
       <div class="header">
-        <h1>Word: <span id="eword"> </span></h1>
-        <p>Latin: <span id="word"> </span></p>
-        <a href="#" class="logo">Next &raquo;</a>
+        <h1>Latin: <span id="word"> </span></h1>
+        <p>Word: <span id="eword"> </span></p>
+		<input type="text" onkeydown="getInputValue();" placeholder="Type something..." id="myInput">
+		
+        <a href="#" class="logo"> Next &raquo;</a>
       </div>
       <div class="gallery">
         
@@ -20,7 +22,7 @@
       <a class="load-more" data-img="curated">Load More</a>
     </div>
   </section>
-  <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+  
   <script src="./main.js"></script>
   <script src="dictionary.js"></script>
 </body>

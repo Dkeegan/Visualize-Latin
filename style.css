@@ -40,10 +40,12 @@ section{
   align-items: center;
 }
 .header h1{
-  cursor: pointer;
   font-size: 40px;
   font-weight: 900;
   letter-spacing: -2px;
+}
+p {
+	  visibility: hidden;
 }
 form{
   margin-top: 30px;
@@ -52,6 +54,7 @@ form{
   position: relative;
 }
 input{
+  display: block;
   border: none;
   border-bottom: 2px solid rgba(128, 128, 128, 0.479);
   font-size: 20px;
@@ -139,6 +142,17 @@ form ion-icon{
  .gallery{
    grid-gap: 30px;
  }
- 
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
  
 }

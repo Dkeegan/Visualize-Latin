@@ -1,13 +1,23 @@
 
 function randomWord(dict){
    var length = dict.length;
-
    var randomNumer = Math.floor((Math.random() * (length - 1))+1);
-
    return dict[randomNumer];
 }
 
-const myFunction = function (a, b) {return a * b}
+  function  getInputValue(){
+            // Selecting the input element and get its value 
+            var inputVal = document.getElementById("myInput").value;
+			var wordCheck = document.getElementById('eword').textContent
+			
+			if (inputVal.toLowerCase() === wordCheck.toLowerCase()){
+				document.getElementById("myInput").style.color="green";
+			}
+			else{
+				document.getElementById("myInput").style.color="red"
+			}
+  }
+  
 class PhotoGallery{
   constructor(){
     this.API_KEY = '';
@@ -45,7 +55,9 @@ class PhotoGallery{
 
   async getImg(index){
     this.loadMore.setAttribute('data-img', 'curated');
-    const baseURL = `https://api.pexels.com/v1/curated?page=${index}&per_page=12`;
+	document.getElementById('eword').textContent = 'rome';
+	this.getWord('rome');
+    const baseURL = 'https://api.pexels.com/v1/search?query=rome&page=1&per_page=12';
     const data = await this.fetchImages(baseURL);
     this.GenerateHTML(data.photos)
     console.log(data)
