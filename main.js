@@ -46,7 +46,12 @@ class PhotoGallery{
 
 
   async getWord(wordToTranslate) {
-    const response = await fetch('https://www.latin-is-simple.com/api/vocabulary/search/?format=json&forms_only=false&query='+wordToTranslate);
+	  var headers = new Headers();
+	  var requestOptions = { method: 'GET',
+               headers: headers,
+               mode: 'cors',
+               cache: 'default' };
+    const response = await fetch('https://www.latin-is-simple.com/api/vocabulary/search/?format=json&forms_only=false&query='+ wordToTranslate,requestOptions);
     const data = await response.json();
     console.log(data[0].short_name);
     document.getElementById('word').textContent = data[0].short_name
